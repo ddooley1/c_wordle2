@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 #include "../inc/wordle.h"
 
 using namespace N;
@@ -21,13 +22,27 @@ void cpp_wordle::resetText()
   cout << ("\033[0m");
 }
 
-void cpp_wordle::printTable(){
-  for(int i = 0; i < table.tableLength; i++){
-    for(int j = 0; j < table.tableWidth; j++){
+void cpp_wordle::printTable()
+{
+  for (int i = 0; i < table.tableLength; i++)
+  {
+    for (int j = 0; j < table.tableWidth; j++)
+    {
       cout << table.tableChar;
     }
     cout << endl;
   }
+}
+
+void cpp_wordle::printTitle(){
+  string text;
+  fstream titleFile("title.txt");
+
+  while(getline(titleFile, text)){
+    cout << text << endl;
+  };
+
+  titleFile.close();
 }
 
 // testing stuff

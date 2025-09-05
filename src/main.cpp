@@ -14,5 +14,9 @@ int main()
   // class instance
   cpp_wordle wordle;
   
+  // print title / table
+  wordle.printTitle();
   wordle.printTable();
+
+  // run game logic
 }

@@ -15,7 +15,9 @@ namespace N
     void resetText();
 
     int printMsg(const std::vector<std::string> &msg);
+
     void printTable();
+    void printTitle();
 
     struct table {
       int tableLength = 5;
